@@ -10,7 +10,8 @@
   margin: 1rem 0;
   position: relative;
   height: 26rem;
-  transition: background 1000ms ease; }
+  transition: background 1000ms ease;
+  transition: all 1500ms ease; }
 
 .terminal__bar {
   background-color: #22225544;

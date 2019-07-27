@@ -11,6 +11,7 @@
   position: relative;
   height: 26rem;
   @include nightmodeFade;
+  @include terminalCollapse;
 }
 
 .terminal__bar {
