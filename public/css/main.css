@@ -1,0 +1,285 @@
+.terminal {
+  background-color: #ffffff11;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  color: #000;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  padding-top: 2rem;
+  margin: 1rem 0;
+  position: relative;
+  height: 26rem;
+  transition: background 1000ms ease; }
+
+.terminal__bar {
+  background-color: #22225544;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  width: 100%;
+  height: 1.3rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: background 1000ms ease; }
+
+.terminal__circle {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.3rem; }
+  .terminal__circle.terminal__circle--red {
+    background-color: #fc645f;
+    left: 0.5rem;
+    cursor: pointer; }
+  .terminal__circle.terminal__circle--yellow {
+    background-color: #fdbc40;
+    left: 1.7rem; }
+  .terminal__circle.terminal__circle--green {
+    background-color: #34c749;
+    left: 2.9rem; }
+
+.terminal__title {
+  color: #000000aa;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.1rem;
+  cursor: default; }
+
+.terminal__line {
+  cursor: default; }
+
+.terminal__text {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  letter-spacing: 0.2rem; }
+
+.terminal p {
+  margin-bottom: 0.5rem; }
+
+.terminal__link {
+  cursor: pointer;
+  text-align: center;
+  transition: color 200ms ease; }
+  .terminal__link:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    color: #fff; }
+
+.cursor-focus {
+  color: #fff; }
+  .cursor-focus::after {
+    content: "_"; }
+
+.cursor-blink::after {
+  content: "_";
+  animation: blink 1.5s infinite; }
+
+@keyframes blink {
+  50% {
+    content: ""; } }
+
+.select-flash {
+  animation: selectFlash 0.3s ease-in-out; }
+
+@keyframes selectFlash {
+  50% {
+    color: #000; } }
+
+.terminalCollapse {
+  padding-top: 1.1rem;
+  padding-bottom: 0.5rem;
+  transition: all 1500ms ease; }
+  .terminalCollapse:hover,
+  .terminalCollapse:hover * {
+    cursor: pointer; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  height: 100%;
+  font-family: "Source Code Pro", monospace;
+  background: linear-gradient(135deg, #b1a7fd 30%, #ff8484);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background 1000ms ease; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+li {
+  list-style: none; }
+
+.nav {
+  margin: 0 1rem;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  transition: all 1500ms ease; }
+
+.navCollapse {
+  height: 10vh;
+  margin-top: 2rem;
+  transition: all 1500ms ease; }
+
+.section {
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; }
+
+.card {
+  background: linear-gradient(120deg, #ffffff00, #ffffff44);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  font-family: "Source Code Pro", monospace;
+  margin: 0 1rem; }
+
+.card__header {
+  position: relative;
+  padding: 1.5rem;
+  color: #333;
+  color: #fff;
+  cursor: default; }
+
+.card__img {
+  background-size: 200%;
+  background-position: center;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+#homeCard .card__img {
+  background-color: #ff774e;
+  background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1607&q=80");
+  background-blend-mode: multiply;
+  opacity: 0.3; }
+
+.card__title {
+  font-family: "Megrim", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.7rem;
+  line-height: 0.9;
+  margin: 0 0 1rem; }
+
+.card__subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 0 1rem; }
+
+.card__content {
+  padding: 1.5rem; }
+
+.card__body {
+  font-size: 1.3rem; }
+
+footer {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2); }
+
+.initials {
+  color: rgba(0, 0, 0, 0.2);
+  font-family: "Megrim", cursive;
+  font-size: 7vh;
+  font-weight: 400;
+  letter-spacing: 0.6rem;
+  cursor: default;
+  transition: opacity 7000ms ease; }
+
+#terminalInitials {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.display-none {
+  display: none; }
+  .display-none * {
+    display: none; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+.opacity-zero {
+  opacity: 0;
+  transition: opacity 300ms ease; }
+
+.body--nightmode {
+  background-image: linear-gradient(210deg, #70168e36, #00646c8a), linear-gradient(135deg, #342b82, #471059);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background 1000ms ease; }
+
+.initials--nightmode {
+  color: rgba(117, 255, 253, 0.5); }
+
+.footer--nightmode {
+  color: red; }
+
+.terminal--nightmode {
+  background-color: #363257ce;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: background 1000ms ease; }
+
+.terminal__bar--nightmode {
+  transition: background 1000ms ease;
+  background-color: #6051b3dd; }
+
+.terminal__title--nightmode {
+  color: #fff; }
+
+.terminal__line--nightmode {
+  color: #fff; }
+
+.terminal__link--nightmode {
+  transition: color 200ms ease; }
+  .terminal__link--nightmode:hover {
+    text-shadow: 0 0 20px rgba(117, 255, 253, 0.2);
+    color: #75fffd; }
+
+.cursor--nightmode {
+  color: #75fffd; }
+
+.nightmodeLink {
+  transition: color 200ms ease; }
+  .nightmodeLink:after {
+    opacity: 0;
+    transition: opacity 300ms ease-out; }
+  .nightmodeLink:hover:after {
+    opacity: 1; }
+
+.nightmodeLink--day:after {
+  content: "(off)"; }
+
+.nightmodeLink--day:hover {
+  text-shadow: 0 0 20px rgba(111, 44, 205, 0.2);
+  color: #6f2ccd; }
+
+.nightmodeLink--night:after {
+  content: "(on)"; }
+
+.nightmodeLink--night:hover {
+  text-shadow: 0 0 20px rgba(255, 219, 73, 0.2);
+  color: #ffdb49; }
+
+.content-empty:after {
+  content: ""; }

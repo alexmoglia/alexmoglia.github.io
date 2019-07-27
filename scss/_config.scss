@@ -1,0 +1,32 @@
+// *** VARIABLES ***
+
+// * Terminal *
+$terminalText: #000;
+$terminalLinkHover: #fff;
+
+// * Nightmode *
+// $primaryNightmodeColor: #ffc23e;
+// $primaryNightmodeColor: #75ffb3;
+$primaryNightmodeColor: #75fffd;
+$nightmodeCursor: $primaryNightmodeColor;
+$nightmodeTerminalLinkHover: $primaryNightmodeColor;
+$nightmodeInitials: rgba($primaryNightmodeColor, 0.5);
+
+$nightmodeBtnDay: #6f2ccd;
+$nightmodeBtnNight: #ffdb49;
+
+// *** MIXINS ***
+
+// * Transitions *
+@mixin linkFade {
+  transition: color 200ms ease;
+}
+
+@mixin nightmodeFade {
+  transition: background 1000ms ease;
+}
+
+@mixin terminalCollapse {
+  // transition: height 1500ms ease;
+  transition: all 1500ms ease;
+}

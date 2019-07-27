@@ -1,0 +1,171 @@
+@import "config";
+@import "terminal";
+
+// **** GENERAL ****
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Source Code Pro", monospace;
+
+  // background: url(../img/unsplash/hallway_efe-kurnaz-unsplash.jpg);
+  background: linear-gradient(135deg, #b1a7fd 30%, #ff8484);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  @include nightmodeFade;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+// **** HEADER & NAV ****
+
+.nav {
+  margin: 0 1rem;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  // border: 1px solid blue;
+  @include terminalCollapse;
+}
+.navCollapse {
+  height: 10vh;
+  margin-top: 2rem;
+  @include terminalCollapse;
+}
+
+// **** MAIN & SECTIONS ****
+
+.section {
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+// *** CARD ***
+.card {
+  background: linear-gradient(120deg, #ffffff00, #ffffff44);
+  // background: linear-gradient(to bottom, #ffffffaa, #ffffff00);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  font-family: "Source Code Pro", monospace;
+  margin: 0 1rem;
+}
+
+.card__header {
+  position: relative;
+  padding: 1.5rem;
+  color: #333;
+  color: #fff;
+  cursor: default;
+}
+
+.card__img {
+  background-size: 200%;
+  background-position: center;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#homeCard .card__img {
+  background-color: rgb(255, 119, 78);
+  // Photo by Ales Nesetril on Unsplash
+  background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1607&q=80");
+  background-blend-mode: multiply;
+  opacity: 0.3;
+}
+
+.card__title {
+  font-family: "Megrim", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  // text-align: right;
+  letter-spacing: 0.7rem;
+  line-height: 0.9;
+  margin: 0 0 1rem;
+}
+
+.card__subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  // text-align: right;
+}
+
+.card__content {
+  padding: 1.5rem;
+}
+
+.card__body {
+  font-size: 1.3rem;
+}
+
+// **** FOOTER ****
+footer {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.initials {
+  color: rgba(0, 0, 0, 0.2);
+  font-family: "Megrim", cursive;
+  font-size: 7vh;
+  font-weight: 400;
+  letter-spacing: 0.6rem;
+  cursor: default;
+  transition: opacity 7000ms ease;
+}
+
+#terminalInitials {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// **** HELPER CLASSES ****
+.display-none {
+  display: none;
+  & * {
+    display: none;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.opacity-zero {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+// **** NIGHTMODE IMPORT ****
+@import "nightmode";

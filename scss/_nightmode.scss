@@ -1,0 +1,101 @@
+// **** GENERAL ****
+
+.body--nightmode {
+  background-image: linear-gradient(210deg, #70168e36, #00646c8a),
+    linear-gradient(135deg, #342b82, #471059);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  @include nightmodeFade;
+}
+
+.initials--nightmode {
+  color: $nightmodeInitials;
+}
+
+// .copyright--nightmode {
+//   color: $nightmodeInitials;
+// }
+
+.footer--nightmode {
+  // color: $nightmodeInitials;
+  color: red;
+}
+
+// **** TERMINAL ****
+
+.terminal--nightmode {
+  background-color: #363257ce;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  @include nightmodeFade;
+}
+
+.terminal__bar--nightmode {
+  @include nightmodeFade;
+  background-color: #6051b3dd;
+}
+
+.terminal__title--nightmode {
+  color: #fff;
+}
+
+.terminal__line--nightmode {
+  color: #fff;
+}
+
+.terminal__link--nightmode {
+  @include linkFade;
+
+  &:hover {
+    text-shadow: 0 0 20px rgba($nightmodeTerminalLinkHover, 0.2);
+    color: $nightmodeTerminalLinkHover;
+  }
+}
+
+.cursor--nightmode {
+  color: $nightmodeCursor;
+}
+
+.nightmodeLink {
+  @include linkFade;
+  &:after {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.nightmodeLink--day {
+  &:after {
+    content: "(off)";
+  }
+
+  &:hover {
+    text-shadow: 0 0 20px rgba($nightmodeBtnDay, 0.2);
+    color: $nightmodeBtnDay;
+  }
+}
+
+.nightmodeLink--night {
+  &:after {
+    content: "(on)";
+  }
+
+  &:hover {
+    text-shadow: 0 0 20px rgba($nightmodeBtnNight, 0.2);
+    color: $nightmodeBtnNight;
+  }
+}
+
+// **** HELPER CLASSES ****
+.content-empty {
+  &:after {
+    content: "";
+  }
+}
