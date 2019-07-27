@@ -215,7 +215,7 @@ const Terminal = function() {
   // * TOGGLE TERMINAL EXPAND/COLLPASE CLASSES *
   function toggleExpandCollpase() {
     terminal.classList.toggle("terminalCollapse");
-    body.classList.toggle("overflow-hidden");
+    document.querySelector("#overflowWrap").classList.toggle("overflow-hidden");
     // nightmode.classList.toggle("content-empty");
     document.querySelector(".nav").classList.toggle("navCollapse");
     document

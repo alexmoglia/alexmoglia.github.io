@@ -216,7 +216,8 @@ footer {
     display: none; }
 
 .overflow-hidden {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100vh; }
 
 .opacity-zero {
   opacity: 0;
