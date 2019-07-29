@@ -6,11 +6,21 @@
   font-size: 1.8rem;
   padding: 1.5rem;
   padding-top: 2rem;
-  margin: 1rem 0;
   position: relative;
   height: 26rem;
   @include nightmodeFade;
   @include terminalCollapse;
+}
+.terminal--collapsed {
+  // height: initial;
+  padding-top: 1.1rem;
+  padding-bottom: 0.5rem;
+  @include terminalCollapse;
+
+  &:hover,
+  &:hover * {
+    cursor: pointer;
+  }
 }
 
 .terminal__bar {
@@ -111,17 +121,5 @@
 @keyframes selectFlash {
   50% {
     color: #000;
-  }
-}
-
-// *** COLLAPSED TERMINAL ***
-.terminalCollapse {
-  padding-top: 1.1rem;
-  padding-bottom: 0.5rem;
-  @include terminalCollapse;
-
-  &:hover,
-  &:hover * {
-    cursor: pointer;
   }
 }

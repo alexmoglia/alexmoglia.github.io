@@ -38,12 +38,18 @@ li {
   background-attachment: fixed;
   background-size: cover;
   @include nightmodeFade;
+
+  padding: 2rem 1rem;
+  min-height: 100vh;
 }
 
 // **** HEADER & NAV ****
 
+.header {
+  margin-bottom: 2rem;
+}
+
 .nav {
-  margin: 0 1rem;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -53,14 +59,12 @@ li {
 }
 .navCollapse {
   height: 10vh;
-  padding-top: 2rem;
   @include terminalCollapse;
 }
 
 // **** MAIN & SECTIONS ****
 
 .section {
-  margin: 2rem 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -77,7 +81,6 @@ li {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   font-family: "Source Code Pro", monospace;
-  margin: 0 1rem;
 }
 
 .card__header {
@@ -131,6 +134,7 @@ li {
 footer {
   text-align: center;
   color: rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
 }
 
 .initials {
