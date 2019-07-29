@@ -31,6 +31,7 @@ const Terminal = function() {
     link.addEventListener("click", event => {
       event.preventDefault();
       if (link !== nightmode) {
+        // selectedLink is used to remember which page link was last clicked, so nightmode is excluded
         selectedLink = link;
       }
       selectLink(link);
@@ -215,7 +216,7 @@ const Terminal = function() {
   // * TOGGLE TERMINAL EXPAND/COLLPASE CLASSES *
   function toggleExpandCollpase() {
     terminal.classList.toggle("terminalCollapse");
-    document.querySelector("#overflowWrap").classList.toggle("overflow-hidden");
+    document.querySelector("#bodyWrap").classList.toggle("overflow-hidden");
     // nightmode.classList.toggle("content-empty");
     document.querySelector(".nav").classList.toggle("navCollapse");
     document

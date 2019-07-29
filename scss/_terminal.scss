@@ -1,8 +1,7 @@
 .terminal {
-  background-color: #ffffff11;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: $terminalBackground;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
-  color: $terminalText;
   font-family: "Source Code Pro", monospace;
   font-size: 1.8rem;
   padding: 1.5rem;
@@ -15,7 +14,7 @@
 }
 
 .terminal__bar {
-  background-color: #22225544;
+  background-color: $terminalBar;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
   width: 100%;
@@ -50,7 +49,7 @@
 }
 
 .terminal__title {
-  color: #000000aa;
+  color: $terminalTitle;
   font-size: 0.8rem;
   text-align: center;
   margin-top: 0.1rem;
@@ -58,8 +57,8 @@
 }
 
 .terminal__line {
+  color: $terminalText;
   cursor: default;
-  // color: #fff;
 }
 
 .terminal__text {
