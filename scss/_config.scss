@@ -36,3 +36,27 @@ $nightmodeBtnNight: #ffdb49;
   // transition: height 1500ms ease;
   transition: all 1500ms ease;
 }
+
+// * Device Media Queries *
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (min-width: 501px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

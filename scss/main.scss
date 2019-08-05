@@ -41,12 +41,52 @@ li {
 
   padding: 2rem 1rem;
   min-height: 100vh;
+
+  // &.bg-img--home {
+  //   // Photo by Pawel Czerwinski on Unsplash
+  //   background-image: linear-gradient(
+  //       135deg,
+  //       rgba(177, 167, 253, $gradientOpacity) 30%,
+  //       rgba(255, 132, 132, $gradientOpacity)
+  //     ),
+  //     url(../img/lava_pawel-czerwinski-unsplash_xs.jpg);
+  // }
+
+  // &.bg-img--about {
+  //   background-image: linear-gradient(
+  //       135deg,
+  //       rgba(177, 167, 253, $gradientOpacity) 30%,
+  //       rgba(255, 132, 132, $gradientOpacity)
+  //     ),
+  //     url(../img/quicksilver_pawel-czerwinski-unsplash_xs.jpg);
+  // }
+
+  // &.bg-img--portfolio {
+  //   background-image: linear-gradient(
+  //       135deg,
+  //       rgba(177, 167, 253, $gradientOpacity) 30%,
+  //       rgba(255, 132, 132, $gradientOpacity)
+  //     ),
+  //     url(../img/rings_pawel-czerwinski-unsplash_xs.jpg);
+  // }
+
+  // &.bg-img--contact {
+  //   background-image: linear-gradient(
+  //       135deg,
+  //       rgba(177, 167, 253, $gradientOpacity) 30%,
+  //       rgba(255, 132, 132, $gradientOpacity)
+  //     ),
+  //     url(../img/cell_pawel-czerwinski-unsplash_xs.jpg);
+  //   background-size: 250%;
+  //   background-position: right;
+  // }
 }
 
 // **** HEADER & NAV ****
 
 .header {
   margin-bottom: 2rem;
+  // border: 1px solid red;
 }
 
 .nav {
@@ -174,3 +214,6 @@ footer {
 
 // **** NIGHTMODE IMPORT ****
 @import "nightmode";
+
+// **** Device Media Queries ****
+@import "mobile";

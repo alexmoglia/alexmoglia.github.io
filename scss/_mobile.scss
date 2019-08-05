@@ -1,0 +1,35 @@
+// SmartPhones
+@include mediaSm {
+  // .bg-img {
+  //   background: #00f;
+  // }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  // .bg-img {
+  //   background: #f0f;
+  // }
+
+  .nav {
+    align-items: center;
+  }
+
+  .terminal {
+    width: 30rem;
+  }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  // .bg-img {
+  //   background: #f00;
+  // }
+}
+
+// Widescreens
+@include mediaXl {
+  // .bg-img {
+  //   background: #ff0;
+  // }
+}

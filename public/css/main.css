@@ -280,3 +280,9 @@ footer {
 
 .content-empty:after {
   content: ""; }
+
+@media screen and (min-width: 501px) {
+  .nav {
+    align-items: center; }
+  .terminal {
+    width: 30rem; } }

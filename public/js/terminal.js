@@ -12,6 +12,7 @@ window.onload = function init() {
 const Terminal = function() {
   // * DOM VARIABLES *
   const body = document.querySelector("body"),
+    bodyWrap = document.querySelector("#bodyWrap"),
     terminal = document.querySelector(".terminal"),
     terminalTitle = document.querySelector(".terminal__title"),
     terminalBar = document.querySelector(".terminal__bar"),
@@ -86,6 +87,7 @@ const Terminal = function() {
 
   // * TYPE MENU *
   const menuSpeed = 10;
+  let menuActiveFlag = false;
 
   function typeMenu(i = 0) {
     if (i < menuArray.length) {
@@ -103,6 +105,7 @@ const Terminal = function() {
       }, 120);
     } else {
       prompt(lastLine);
+      menuActiveFlag = true;
     }
   }
 
@@ -146,14 +149,17 @@ const Terminal = function() {
 
   // * SELECT LINK, UPDATE TERMINAL *
   const selectLink = function(link) {
-    toggleDouble(link);
-    setTimeout(() => {
-      if (link.id === "nightmode") {
-        toggleNightmode();
-      } else {
-        changeDir(link);
-      }
-    }, 500);
+    if (menuActiveFlag === true) {
+      menuActiveFlag = false;
+      toggleDouble(link);
+      setTimeout(() => {
+        if (link.id === "nightmode") {
+          toggleNightmode();
+        } else {
+          changeDir(link);
+        }
+      }, 500);
+    }
   };
 
   // * CHANGE DIRECTORY *
@@ -162,7 +168,7 @@ const Terminal = function() {
     setTimeout(() => {
       toggleDouble(lastLine);
       setTimeout(() => {
-        // updateTitle(link.id); // ! temp turning off so alexmoglia is always at top of terminal
+        changeBackground(link);
         collapseTerminal();
         clearMenu();
         prompt(firstLine, link.id);
@@ -203,7 +209,6 @@ const Terminal = function() {
       toggleDouble(firstLine);
       setTimeout(() => {
         clearMenu();
-        // updateTitle("alexmoglia"); // ! temp off - see line ~156
         toggleExpandCollpase();
         menu(1500);
         setTimeout(() => {
@@ -216,18 +221,13 @@ const Terminal = function() {
   // * TOGGLE TERMINAL EXPAND/COLLPASE CLASSES *
   function toggleExpandCollpase() {
     terminal.classList.toggle("terminal--collapsed");
-    document.querySelector("#bodyWrap").classList.toggle("overflow-hidden");
+    bodyWrap.classList.toggle("overflow-hidden");
     // nightmode.classList.toggle("content-empty");
     document.querySelector(".nav").classList.toggle("navCollapse");
     document
       .querySelector("#terminalInitials")
       .classList.toggle("opacity-zero");
   }
-
-  // * UPDATE TERMINAL TITLE *
-  const updateTitle = function(link) {
-    terminalTitle.innerHTML = `${link} - bash`;
-  };
 
   // * ADD CURSOR FOCUS CLASSES *
   function addCursorFocus(line) {
@@ -253,6 +253,16 @@ const Terminal = function() {
     setTimeout(() => {
       line.classList.remove("select-flash");
     }, 1000);
+  }
+
+  // *** CHANGE BACKGROUND ***
+  const backgrounds = ["home", "about", "portfolio", "contact"];
+
+  function changeBackground(link) {
+    backgrounds.forEach(bg => {
+      bodyWrap.classList.remove(`bg-img--${bg}`);
+    });
+    bodyWrap.classList.add(`bg-img--${link.id}`);
   }
 
   // *** NIGHTMODE ***
