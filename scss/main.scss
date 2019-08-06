@@ -33,8 +33,7 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  // background-size: cover;
-  background-size: 100%;
+  background-size: cover;
   @include nightmodeFade;
 
   padding: 2rem 1rem;

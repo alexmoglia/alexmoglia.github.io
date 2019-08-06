@@ -119,7 +119,7 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
   transition: background 1000ms ease;
   padding: 2rem 1rem;
   min-height: 100vh; }
