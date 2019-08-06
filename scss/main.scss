@@ -18,6 +18,10 @@ body {
 a {
   text-decoration: none;
   color: #000;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 li {
@@ -26,13 +30,6 @@ li {
 
 // **** BACKGROUND IMAGE & GRADIENT ****
 .bg-img {
-  // Photo by Pawel Czerwinski on Unsplash
-  background-image: linear-gradient(
-      135deg,
-      rgba(177, 167, 253, $gradientOpacity) 30%,
-      rgba(255, 132, 132, $gradientOpacity)
-    ),
-    url(../img/lava_pawel-czerwinski-unsplash_xs.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -41,45 +38,10 @@ li {
 
   padding: 2rem 1rem;
   min-height: 100vh;
+}
 
-  // &.bg-img--home {
-  //   // Photo by Pawel Czerwinski on Unsplash
-  //   background-image: linear-gradient(
-  //       135deg,
-  //       rgba(177, 167, 253, $gradientOpacity) 30%,
-  //       rgba(255, 132, 132, $gradientOpacity)
-  //     ),
-  //     url(../img/lava_pawel-czerwinski-unsplash_xs.jpg);
-  // }
-
-  // &.bg-img--about {
-  //   background-image: linear-gradient(
-  //       135deg,
-  //       rgba(177, 167, 253, $gradientOpacity) 30%,
-  //       rgba(255, 132, 132, $gradientOpacity)
-  //     ),
-  //     url(../img/quicksilver_pawel-czerwinski-unsplash_xs.jpg);
-  // }
-
-  // &.bg-img--portfolio {
-  //   background-image: linear-gradient(
-  //       135deg,
-  //       rgba(177, 167, 253, $gradientOpacity) 30%,
-  //       rgba(255, 132, 132, $gradientOpacity)
-  //     ),
-  //     url(../img/rings_pawel-czerwinski-unsplash_xs.jpg);
-  // }
-
-  // &.bg-img--contact {
-  //   background-image: linear-gradient(
-  //       135deg,
-  //       rgba(177, 167, 253, $gradientOpacity) 30%,
-  //       rgba(255, 132, 132, $gradientOpacity)
-  //     ),
-  //     url(../img/cell_pawel-czerwinski-unsplash_xs.jpg);
-  //   background-size: 250%;
-  //   background-position: right;
-  // }
+.bg-img--day {
+  background-image: $gradientDay, $lavaTall;
 }
 
 // **** HEADER & NAV ****
@@ -98,7 +60,7 @@ li {
   @include terminalCollapse;
 }
 .navCollapse {
-  height: 10vh;
+  height: 8vh;
   @include terminalCollapse;
 }
 
@@ -110,7 +72,7 @@ li {
   justify-content: center;
 }
 
-// *** CARD ***
+// *** CARDS ***
 .card {
   background: rgba(255, 255, 255, 0.5);
   background: linear-gradient(
@@ -133,15 +95,16 @@ li {
 }
 
 .card__img {
-  background-position: center;
+  // background-position: center;
 }
 
 #homeCard .card__img {
   // Photo by Ales Nesetril on Unsplash
   background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1607&q=80");
+  background-size: 150%;
   background-size: 200%;
-  // background-color: rgba(255, 255, 255, 0.269);
-  background-color: rgba(82, 0, 82, 0.26);
+  background-position: center;
+  background-color: rgba(10, 0, 60, 0.45);
   background-blend-mode: darken;
 }
 
@@ -152,7 +115,7 @@ li {
   // text-align: right;
   letter-spacing: 0.7rem;
   line-height: 0.9;
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .card__subtitle {

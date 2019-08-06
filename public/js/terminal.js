@@ -168,7 +168,7 @@ const Terminal = function() {
     setTimeout(() => {
       toggleDouble(lastLine);
       setTimeout(() => {
-        changeBackground(link);
+        // changeBackground(link);
         collapseTerminal();
         clearMenu();
         prompt(firstLine, link.id);
@@ -255,15 +255,15 @@ const Terminal = function() {
     }, 1000);
   }
 
-  // *** CHANGE BACKGROUND ***
-  const backgrounds = ["home", "about", "portfolio", "contact"];
+  // // *** CHANGE BACKGROUND ***
+  // const backgrounds = ["home", "about", "portfolio", "contact"];
 
-  function changeBackground(link) {
-    backgrounds.forEach(bg => {
-      bodyWrap.classList.remove(`bg-img--${bg}`);
-    });
-    bodyWrap.classList.add(`bg-img--${link.id}`);
-  }
+  // function changeBackground(link) {
+  //   backgrounds.forEach(bg => {
+  //     bodyWrap.classList.remove(`bg-img--${bg}`);
+  //   });
+  //   bodyWrap.classList.add(`bg-img--${link.id}`);
+  // }
 
   // *** NIGHTMODE ***
   const loadNightmodeOnFlag = function() {
@@ -298,7 +298,8 @@ const Terminal = function() {
 
   function toggleNightmodeStyles() {
     // * Gradient Nightmode Change *
-    body.classList.toggle("body--nightmode");
+    bodyWrap.classList.toggle("bg-img--day");
+    bodyWrap.classList.toggle("bg-img--night");
 
     // * Terminal Nightmode Changes *
     terminal.classList.toggle("terminal--nightmode");

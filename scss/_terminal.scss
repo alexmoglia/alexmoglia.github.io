@@ -86,7 +86,8 @@
   text-align: center;
   @include linkFade;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-shadow: 0 0 20px rgba($terminalLinkHover, 0.5);
     color: $terminalLinkHover;
   }

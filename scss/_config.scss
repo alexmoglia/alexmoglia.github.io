@@ -1,7 +1,20 @@
 // *** VARIABLES ***
 
 // * Background *
+// Photo by Pawel Czerwinski on Unsplash
+$lavaTall: url(../img/lava_pawel-czerwinski-unsplash_tall.jpg);
+$lavaWide: url(../img/lava_pawel-czerwinski-unsplash_wide.jpg);
 $gradientOpacity: 0.8;
+$gradientDay: linear-gradient(
+  135deg,
+  rgba(177, 167, 253, 0.8) 30%,
+  rgba(255, 132, 132, 0.8)
+);
+$gradientNight: linear-gradient(
+  135deg,
+  rgba(22, 0, 57, 0.9) 30%,
+  rgba(62, 0, 0, 0.9)
+);
 
 // * Terminal *
 $terminalBackground: #ffffff11;
@@ -11,8 +24,8 @@ $terminalText: #000;
 $terminalLinkHover: #fff;
 
 // * Nightmode *
-// $primaryNightmodeColor: #ffc23e;
 // $primaryNightmodeColor: #75ffb3;
+// $primaryNightmodeColor: #ffc23e;
 $primaryNightmodeColor: #75fffd;
 $nightmodeCursor: $primaryNightmodeColor;
 $nightmodeTerminalLinkHover: $primaryNightmodeColor;
@@ -40,13 +53,8 @@ $nightmodeBtnNight: #ffdb49;
 // * Device Media Queries *
 
 // Media Query Mixins
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
 @mixin mediaMd {
-  @media screen and (min-width: 501px) {
+  @media screen and (min-width: 560px) {
     @content;
   }
 }

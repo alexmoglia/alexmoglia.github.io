@@ -1,13 +1,7 @@
 // **** GENERAL ****
 
-.body--nightmode {
-  background-image: linear-gradient(210deg, #70168e36, #00646c8a),
-    linear-gradient(135deg, #342b82, #471059);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  @include nightmodeFade;
+.bg-img--night {
+  background-image: $gradientNight, $lavaTall;
 }
 
 .initials--nightmode {
@@ -47,7 +41,8 @@
 .terminal__link--nightmode {
   @include linkFade;
 
-  &:hover {
+  &:hover,
+  &:focus {
     text-shadow: 0 0 20px rgba($nightmodeTerminalLinkHover, 0.2);
     color: $nightmodeTerminalLinkHover;
   }

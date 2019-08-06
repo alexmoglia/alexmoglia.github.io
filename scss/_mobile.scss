@@ -1,16 +1,12 @@
-// SmartPhones
-@include mediaSm {
-  // .bg-img {
-  //   background: #00f;
-  // }
-}
-
-// Tablets & Small Laptops
+// **** Tablets & Small Laptops ****
 @include mediaMd {
-  // .bg-img {
-  //   background: #f0f;
+  // // !!!!
+  // .card__title {
+  //   color: #ff0;
   // }
+  // // !!!!
 
+  // * NAV & TERMINAL *
   .nav {
     align-items: center;
   }
@@ -18,18 +14,113 @@
   .terminal {
     width: 30rem;
   }
+
+  // * MAIN & SECTION *
+  main {
+    margin: 0 1.5rem;
+  }
+
+  // * CARDS *
+  .card__header {
+    padding: 2rem 0 1rem 2.5rem;
+  }
+
+  #homeCard .card__img {
+    background-size: 200%;
+    background-position: 0% 40%;
+  }
+
+  .card__title {
+    font-size: 5.5rem;
+    letter-spacing: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .card__subtitle {
+    font-size: 1.8rem;
+  }
+
+  .card__content {
+    padding: 1.5rem 2.5rem 2rem;
+  }
 }
 
-// Desktops & Laptops
+// **** Desktops & Laptops ****
 @include mediaLg {
-  // .bg-img {
-  //   background: #f00;
+  // // !!!!
+  // .card__title {
+  //   color: #f00;
   // }
+  // // !!!!
+
+  .bg-img--day {
+    background-image: $gradientDay, $lavaWide;
+  }
+
+  .bg-img--night {
+    background-image: $gradientNight, $lavaWide;
+  }
+
+  // * MAIN & SECTION *
+  main {
+    margin: 0 auto;
+    max-width: 80vw;
+  }
+
+  // * CARDS *
+  .card__header {
+    padding: 3rem 0 1rem 4rem;
+  }
+
+  #homeCard .card__img {
+    background-size: 125%;
+    background-position: -75% 40%;
+  }
+
+  .card__title {
+    letter-spacing: 1.1rem;
+  }
+
+  .card__subtitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .card__content {
+    padding: 1.5rem 4rem 2rem;
+  }
 }
 
-// Widescreens
+// **** Widescreens ****
 @include mediaXl {
-  // .bg-img {
-  //   background: #ff0;
+  // // !!!!
+  // .card__title {
+  //   color: #0f0;
   // }
+  // // !!!!
+
+  // * CARDS *
+  .card__header {
+    padding: 5rem 0 3rem 7rem;
+  }
+
+  #homeCard .card__img {
+    background-size: 115%;
+    background-position: -175% 40%;
+  }
+
+  .card__title {
+    font-size: 5.5rem;
+    letter-spacing: 1.3rem;
+  }
+
+  .card__subtitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    line-height: 2rem;
+  }
+
+  .card__content {
+    padding: 1.5rem 4rem 2rem;
+  }
 }

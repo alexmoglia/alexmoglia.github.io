@@ -71,7 +71,7 @@
   cursor: pointer;
   text-align: center;
   transition: color 200ms ease; }
-  .terminal__link:hover {
+  .terminal__link:hover, .terminal__link:focus {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     color: #fff; }
 
@@ -109,12 +109,13 @@ body {
 a {
   text-decoration: none;
   color: #000; }
+  a:focus {
+    outline: none; }
 
 li {
   list-style: none; }
 
 .bg-img {
-  background-image: linear-gradient(135deg, rgba(177, 167, 253, 0.8) 30%, rgba(255, 132, 132, 0.8)), url(../img/lava_pawel-czerwinski-unsplash_xs.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -122,6 +123,9 @@ li {
   transition: background 1000ms ease;
   padding: 2rem 1rem;
   min-height: 100vh; }
+
+.bg-img--day {
+  background-image: linear-gradient(135deg, rgba(177, 167, 253, 0.8) 30%, rgba(255, 132, 132, 0.8)), url(../img/lava_pawel-czerwinski-unsplash_tall.jpg); }
 
 .header {
   margin-bottom: 2rem; }
@@ -134,7 +138,7 @@ li {
   transition: all 1500ms ease; }
 
 .navCollapse {
-  height: 10vh;
+  height: 8vh;
   transition: all 1500ms ease; }
 
 .section {
@@ -157,13 +161,12 @@ li {
   padding: 1.5rem;
   cursor: default; }
 
-.card__img {
-  background-position: center; }
-
 #homeCard .card__img {
   background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1607&q=80");
+  background-size: 150%;
   background-size: 200%;
-  background-color: rgba(82, 0, 82, 0.26);
+  background-position: center;
+  background-color: rgba(10, 0, 60, 0.45);
   background-blend-mode: darken; }
 
 .card__title {
@@ -172,7 +175,7 @@ li {
   font-weight: 400;
   letter-spacing: 0.7rem;
   line-height: 0.9;
-  margin: 0 0 1rem; }
+  margin-bottom: 1rem; }
 
 .card__subtitle {
   font-size: 1.6rem;
@@ -218,13 +221,8 @@ footer {
   opacity: 0;
   transition: opacity 300ms ease; }
 
-.body--nightmode {
-  background-image: linear-gradient(210deg, #70168e36, #00646c8a), linear-gradient(135deg, #342b82, #471059);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  transition: background 1000ms ease; }
+.bg-img--night {
+  background-image: linear-gradient(135deg, rgba(22, 0, 57, 0.9) 30%, rgba(62, 0, 0, 0.9)), url(../img/lava_pawel-czerwinski-unsplash_tall.jpg); }
 
 .initials--nightmode {
   color: rgba(117, 255, 253, 0.5); }
@@ -249,7 +247,7 @@ footer {
 
 .terminal__link--nightmode {
   transition: color 200ms ease; }
-  .terminal__link--nightmode:hover {
+  .terminal__link--nightmode:hover, .terminal__link--nightmode:focus {
     text-shadow: 0 0 20px rgba(117, 255, 253, 0.2);
     color: #75fffd; }
 
@@ -281,8 +279,60 @@ footer {
 .content-empty:after {
   content: ""; }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 560px) {
   .nav {
     align-items: center; }
   .terminal {
-    width: 30rem; } }
+    width: 30rem; }
+  main {
+    margin: 0 1.5rem; }
+  .card__header {
+    padding: 2rem 0 1rem 2.5rem; }
+  #homeCard .card__img {
+    background-size: 200%;
+    background-position: 0% 40%; }
+  .card__title {
+    font-size: 5.5rem;
+    letter-spacing: 1rem;
+    margin-bottom: 2rem; }
+  .card__subtitle {
+    font-size: 1.8rem; }
+  .card__content {
+    padding: 1.5rem 2.5rem 2rem; } }
+
+@media screen and (min-width: 769px) {
+  .bg-img--day {
+    background-image: linear-gradient(135deg, rgba(177, 167, 253, 0.8) 30%, rgba(255, 132, 132, 0.8)), url(../img/lava_pawel-czerwinski-unsplash_wide.jpg); }
+  .bg-img--night {
+    background-image: linear-gradient(135deg, rgba(22, 0, 57, 0.9) 30%, rgba(62, 0, 0, 0.9)), url(../img/lava_pawel-czerwinski-unsplash_wide.jpg); }
+  main {
+    margin: 0 auto;
+    max-width: 80vw; }
+  .card__header {
+    padding: 3rem 0 1rem 4rem; }
+  #homeCard .card__img {
+    background-size: 125%;
+    background-position: -75% 40%; }
+  .card__title {
+    letter-spacing: 1.1rem; }
+  .card__subtitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem; }
+  .card__content {
+    padding: 1.5rem 4rem 2rem; } }
+
+@media screen and (min-width: 1171px) {
+  .card__header {
+    padding: 5rem 0 3rem 7rem; }
+  #homeCard .card__img {
+    background-size: 115%;
+    background-position: -175% 40%; }
+  .card__title {
+    font-size: 5.5rem;
+    letter-spacing: 1.3rem; }
+  .card__subtitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    line-height: 2rem; }
+  .card__content {
+    padding: 1.5rem 4rem 2rem; } }
