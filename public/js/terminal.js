@@ -11,8 +11,7 @@ window.onload = function init() {
 // *** TERMINAL FRAMEWORK ***
 const Terminal = function() {
   // * DOM VARIABLES *
-  const body = document.querySelector("body"),
-    bodyWrap = document.querySelector("#bodyWrap"),
+  const bodyWrap = document.querySelector("#bodyWrap"),
     terminal = document.querySelector(".terminal"),
     terminalTitle = document.querySelector(".terminal__title"),
     terminalBar = document.querySelector(".terminal__bar"),

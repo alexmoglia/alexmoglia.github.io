@@ -4,12 +4,16 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o public/css/ --recursive"
+    "sass": "node-sass -w scss/ -o public/css/ --recursive",
+    "prefix": "postcss public/css/main.css -u autoprefixer -o prefixed.css"
   },
   "author": "Alex Moglia",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^6.0.1"
+    "autoprefixer": "^9.6.1",
+    "eslint": "^6.0.1",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.3"
   },
   "dependencies": {
     "typed": "^0.3.3"
